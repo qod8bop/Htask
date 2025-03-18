@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -37,9 +37,10 @@ int main() {
 		(n2 < n3) ? n2 :
 		n3;
 
-
-	mid = (n1 <= max && n1 >= min) ? n1 :
-		(n2 <= max && n2 >= min) ? n2 :
+	mid = (n1 == n2 || n1 == n3) ? n1 :
+		(n2 == n3) ? n2 :
+		(n1 < max && n1 > min) ? n1 :
+		(n2 < max && n2 > min) ? n2 :
 		n3;
 
 
