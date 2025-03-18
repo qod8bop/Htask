@@ -1,4 +1,6 @@
 ﻿#include <iostream>
+#include <ctime>
+
 
 using namespace std;
 
@@ -8,14 +10,14 @@ int main() {
 
 	srand(time(NULL));
 
-	short nums[11];
+	short nums[10];
 	short min = 0;
 	short max = 0;
 
 
-	for (int i = 0; i < (sizeof(nums)/2) - 1; i++) {
+	for (int i = 0; i < (sizeof(nums) / sizeof(nums[0])); i++) {
 
-		nums[i] = 1 + rand() % 10;
+		nums[i] = 1 + rand() % 1000;
 
 		cout << nums[i] << " ";
 
@@ -25,7 +27,7 @@ int main() {
 	max = nums[0];
 
 
-	for (int i = 1; i < (sizeof(nums) / 2) - 1; i++) {
+	for (int i = 1; i < (sizeof(nums) / sizeof(nums[0])); i++) {
 
 		if (nums[i] < min) {
 			min = nums[i];

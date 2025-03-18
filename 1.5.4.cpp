@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <ctime>
 
 using namespace std;
 
@@ -9,9 +10,6 @@ int main() {
 	srand(time(NULL));
 
 	short arr[10];
-	short isle = 0;
-	short counter = 0;
-
 
 	cout << "До сортировки:     ";
 
@@ -22,43 +20,31 @@ int main() {
 		cout << arr[i] << " ";
 	}
 
+	cout << endl << endl << endl;
 
-	cout << endl << endl;
 	cout << "После сортировки:  ";
 
-
-	while (counter != 10) {
-		for (int i = 0; i < 9; i++) {
-
-			if (arr[i] > arr[i + 1]) {
-				isle = arr[i];
-				arr[i] = arr[i + 1];
-				arr[i + 1] = isle;
+	bool swapped;
+	do {
+		swapped = false;
+		for (int i = 9; i > 0; i--) {
+			if (arr[i] < arr[i-1]) {
+				swap(arr[i], arr[i - 1]);
+				swapped = true;
 			}
 		}
+	} while (swapped);
 
-		for (int i = 0; i < 9; i++) {
-			if ((arr[i] == arr[i + 1]) || (arr[i] < arr[i + 1])) {
-				counter++;
-			}
-		}
-
-
-		if (counter < 9) {
-			counter = 0;
-		}
-		else {
-			break;
-		}
-
-	}
 
 
 	for (int i = 0; i < 10; i++) {
+
 		cout << arr[i] << " ";
 	}
-	
+
+
 	cout << endl << endl;
+	
 
 	return 0;
 }
