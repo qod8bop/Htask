@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <ctime>
 
 using namespace std;
@@ -16,6 +16,10 @@ int main() {
 		nums[i] = 1 + rand() % 10;
 
 		cout << nums[i] << ", ";
+
+		if (i == (sizeof(nums) / sizeof(nums[0]))-1) {
+			cout << nums[i];
+		}
 
 	}
 
