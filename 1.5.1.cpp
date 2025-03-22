@@ -15,7 +15,7 @@ int main() {
 
 		nums[i] = 1 + rand() % 10;
 
-		cout << nums[i] << " ";
+		cout << nums[i] << ", ";
 
 	}
 
