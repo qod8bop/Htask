@@ -1,4 +1,4 @@
-﻿# include <iostream>
+# include <iostream>
 
 using namespace std;
 
@@ -9,25 +9,20 @@ int out;
 
 int fibich(int n) {
 
-	for (int i = 1; i <= n; i++) {
+	switch (n) {
+	case 1:
+		return 0;
+		break;
+	
+	case 2:
+		return 1;
 
-		if (i == 1) {
-			num = 0;
-			
-		}
-
-		if (i == 2) {
-			num = 1;
-			
-		}
-
-		else { num = fibich(i - 1) + fibich(i - 2); }
-
-		
-		
+	default:
+		return fibich(n - 1) + fibich(n - 2);
+		break;
 	}
-
-
+	
+	
 	return num;
 }
 
@@ -44,7 +39,7 @@ int main() {
 		cout << fibich(r) << " ";
 	}
 
-	
+
 
 
 	return 0;
