@@ -11,18 +11,17 @@ int main() {
 
 	short nums[10];
 
-	for (int i = 0; i < (sizeof(nums) / sizeof(nums[0])); i++) {
+	for (int i = 0; i < (sizeof(nums)/sizeof(nums[0])); i++) {
 
 		nums[i] = 1 + rand() % 10;
-
-		cout << nums[i] << ", ";
-
-		if (i == (sizeof(nums) / sizeof(nums[0]))-1) {
+		
+		if (i == ((sizeof(nums) / sizeof(nums[0]))-1)) {
 			cout << nums[i];
 		}
 
+		else{ cout << nums[i] << ", "; }
+		
 	}
-
 
 	return 0;
 }
