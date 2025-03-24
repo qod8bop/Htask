@@ -2,38 +2,36 @@
 
 using namespace std;
 
+unsigned _int64 slt[3];
 
-unsigned long long num;
-unsigned long long is2 = 0;
-unsigned long long is1 = 1;
 
 int fibich(int n) {
 
-	 num = 0;
-	 is2 = 0;
-	 is1 = 1;
+    slt[0] = 0;
+	slt[2] = 0;
+	slt[1] = 1;
 
-	 if (n == 1) {
-		 num = is2;
-	 }
+	if (n == 1) {
+		slt[0] = slt[2];
+	}
 
-	 if (n == 2) {
-		 num = is1;
-	 }
+	if (n == 2) {
+		slt[0] = slt[1];
+	}
 
 
 	for (int i = 2; i < n; i++) {
 
 
-		num = is1 + is2;
-		is2 = is1;
-		is1 = num;
+		slt[0] = slt[1] + slt[2];
+		slt[2] = slt[1];
+		slt[1] = slt[0];
 
 	}
 
-	
 
-	return num;
+
+	return slt[0];
 }
 
 
@@ -47,9 +45,9 @@ int main() {
 
 	for (int r = 1; r <= chis; r++) {
 
-		
+
 		cout << fibich(r) << " ";
-		
+
 	}
 
 

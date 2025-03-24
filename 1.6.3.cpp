@@ -1,4 +1,4 @@
-# include <iostream>
+﻿# include <iostream>
 
 using namespace std;
 
@@ -10,20 +10,10 @@ int out;
 int fibich(int n) {
 
 	switch (n) {
-	case 1:
-		return 0;
-		break;
-	
-	case 2:
-		return 1;
-
-	default:
-		return fibich(n - 1) + fibich(n - 2);
-		break;
+		case 1: return 0;
+		case 2: return 1;
+		default: return fibich(n - 1) + fibich(n - 2);
 	}
-	
-	
-	return num;
 }
 
 
