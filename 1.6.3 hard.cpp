@@ -1,13 +1,13 @@
-﻿# include <iostream>
+#include <iostream>
 
 using namespace std;
 
-unsigned _int64 slt[3];
+long long slt[3];
 
 
-int fibich(int n) {
+ long long fibich(int n) {
 
-    slt[0] = 0;
+	slt[0] = 0;
 	slt[2] = 0;
 	slt[1] = 1;
 
@@ -46,12 +46,9 @@ int main() {
 	for (int r = 1; r <= chis; r++) {
 
 
-		cout << fibich(r) << " ";
+		cout << r  << ":   " << fibich(r) << endl << endl;
 
 	}
-
-
-	// Подскажите, пожалуйста, почему всё ломается после 47 числа?
 
 	return 0;
 }
