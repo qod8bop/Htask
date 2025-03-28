@@ -2,9 +2,9 @@
 
 using namespace std;
 
-namespace Calc {
 
-	namespace addi{
+
+	namespace addi {
 		int calc(int x, int y) {
 			return x + y;
 		}
@@ -27,7 +27,7 @@ namespace Calc {
 			return x / y;
 		}
 	}
-}
+
 
 int main() {
 
@@ -36,11 +36,11 @@ int main() {
 	int x = 6;
 	int y = 9;
 
-	cout << "x= " << x <<"  y= "<< y<< endl << endl;
-	cout << "Сложение: " << Calc::addi::calc(x, y) << endl;
-	cout << "Вычитание: " << Calc::subt::calc(x, y) << endl;
-	cout << "Умножение: " << Calc::mult::calc(x, y) << endl;
-	cout << "Деление: " << Calc::divi::calc(x, y) << endl;
+	cout << "x= " << x << "  y= " << y << endl << endl;
+	cout << "Сложение: " << addi::calc(x, y) << endl;
+	cout << "Вычитание: " << subt::calc(x, y) << endl;
+	cout << "Умножение: " << mult::calc(x, y) << endl;
+	cout << "Деление: " << divi::calc(x, y) << endl;
 
 	return 0;
 }
