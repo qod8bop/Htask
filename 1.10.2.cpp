@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 
 
 using namespace std;
@@ -22,7 +22,7 @@ int main() {
 		cout << arr[i] << " ";
 	}
 
-	
+	free(arr);
 
 	return 0;
 }
