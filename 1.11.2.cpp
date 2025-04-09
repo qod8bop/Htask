@@ -10,7 +10,7 @@ int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	string mysteryword = "Говно";
+	string mysteryword = "ssdfg";
 	string guess;
 
 	while (1 > 0) {
