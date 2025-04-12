@@ -31,8 +31,8 @@ int main() {
 
 	while(!(fin.eof())){
 		fin >> s;
-		if (!s.empty()) {
-			cout << s << endl;
+		if (!s.empty()) {		
+			cout << s << endl;	//Почему-то последнее слово 2 раза выводится.
 		}
 
 	}
