@@ -23,7 +23,7 @@ int main() {
 
 	for (int i = 0; i < s; i++) {
 		fin >> arr[s - i];
-		cout << arr[s - i] << " ";
+		cout << arr[s - i] << " ";		//не понимаю, почему это не работает
 	}
 
 
