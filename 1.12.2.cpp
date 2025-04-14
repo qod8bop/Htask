@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include <cstring>
 #include <Windows.h>
 #include <fstream>
@@ -16,20 +16,21 @@ int main() {
 	ofstream fout("in.txt");
 	fout << "5" << endl;
 	fout << "4 " << "6 " << "8 " << "10 " << "12 ";
+	fout.close();
 
 	ifstream fin("in.txt");
 	fin >> s;
 	int* arr = new int[s];
 
 	for (int i = 0; i < s; i++) {
-		fin >> arr[s - i-1];
-		cout << arr[s - i-1] << " ";		//не понимаю, почему это не работает
+		fin >> arr[s - i - 1];
+		cout << arr[s - i - 1] << " ";		
 	}
 
 
-	delete[] arr;
+
 	fin.close();
-	fout.close();
+	delete[] arr;
 
 	return 0;
 }
