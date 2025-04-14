@@ -36,7 +36,7 @@ int main() {
 
 
 	fout.close();
-
-
+	delete[] arr;
+	
 	return 0;
 }
