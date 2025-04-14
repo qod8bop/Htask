@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿#include<iostream>
 #include <cstring>
 #include <Windows.h>
 #include <fstream>
@@ -19,11 +19,11 @@ int main() {
 
 	ifstream fin("in.txt");
 	fin >> s;
-	int* arr = new int[s];   
+	int* arr = new int[s];
 
 	for (int i = 0; i < s; i++) {
-		fin >> arr[s - i];
-		cout << arr[s - i] << " ";		//не понимаю, почему это не работает
+		fin >> arr[s - i-1];
+		cout << arr[s - i-1] << " ";		//не понимаю, почему это не работает
 	}
 
 

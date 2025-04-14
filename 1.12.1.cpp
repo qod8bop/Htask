@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿#include<iostream>
 #include <cstring>
 #include <Windows.h>
 #include <fstream>
@@ -24,21 +24,17 @@ int main() {
 	fout << "Яблоко ";
 	fout << "груша ";
 	fout << "апельсин";
-	fout << endl;				//Почему-то без этого эндла, fin не читает файл дальше черешни.
+	fout.close();			
 
 
 	ifstream fin("in.txt");
 
-	while(!(fin.eof())){
-		fin >> s;
-		if (!s.empty()) {		
-			cout << s << endl;	//Почему-то последнее слово 2 раза выводится.
-		}
-
+	while (fin >> s) {
+		cout << s << endl;
 	}
 
 	fin.close();
-	fout.close();
+
 
 	return 0;
 }

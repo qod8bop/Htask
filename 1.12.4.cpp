@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿#include<iostream>
 #include <cstring>
 #include <Windows.h>
 #include <fstream>
@@ -21,23 +21,24 @@ int main() {
 	fin >> rows;
 	fin >> cols;
 
-	int** arr = new int*[rows];
+	int** arr = new int* [rows];
 	for (int i = 0; i < rows; i++) {
 		arr[i] = new int[cols];
-		}
+	}
 
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
-			fin >> val;						//Понятия не имею, почему у val какое-то случайное значение.
-			*arr[i, cols - 1 - j] = val;
+			fin >> val;						
+			arr[i][ cols - 1 - j] = val;
 		}
 	}
-													
+
 
 	for (int i = 0; i < rows; i++) {
-		for (int j = 0; j < cols; j++) {    //И не понимаю, почему ничего не выводится.
-			cout << arr[i, j];
+		for (int j = 0; j < cols; j++) {   
+			cout << arr[i] [j];
 		}
+		cout << endl;
 	}
 
 
